@@ -69,13 +69,13 @@ function firstTo40() {
 function lastTo50() {
   // Set the grade of the last student to 50.
   outputEl.innerHTML = "Last grade to 50";
-  grades[11] = 50;
+  grades[grades.length -1] = 50;
 }
 
 function randomTo100() {
   // Set the grade of a random student to 100.
   outputEl.innerHTML = "Random grade to 100";
-   grades[randomInt(0,12)]= 100;
+   grades[randomInt(Math.random())]= 100;
 }
 
 function addRandomGrade() {
@@ -89,7 +89,7 @@ function addRandomGrade() {
 function removeLastGrade() {
   // Remove the last grade.
   outputEl.innerHTML = "Remove the last grade";
-  grades.pop(Math.random()* 100)
+  grades.pop(grades.length - 1)
 }
 
 function countBelow50() {
@@ -98,7 +98,7 @@ function countBelow50() {
   let count = 0;
   
     for (let i = 0; i < grades.length; i++) {
-      if(grades [i] > 50) {
+      if(grades [i] < 50) {
         count++
       }
     }
