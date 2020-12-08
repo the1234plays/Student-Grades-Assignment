@@ -75,7 +75,8 @@ function lastTo50() {
 function randomTo100() {
   // Set the grade of a random student to 100.
   outputEl.innerHTML = "Random grade to 100";
-   grades[randomInt(Math.random())]= 100;
+  grades[Math.floor( grades.length * Math.random())] = 100
+
 }
 
 function addRandomGrade() {
@@ -89,7 +90,7 @@ function addRandomGrade() {
 function removeLastGrade() {
   // Remove the last grade.
   outputEl.innerHTML = "Remove the last grade";
-  grades.pop(grades.length - 1)
+  grades.pop(grades.length)
 }
 
 function countBelow50() {
